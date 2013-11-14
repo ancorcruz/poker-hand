@@ -25,8 +25,8 @@ class Hand
     straight_flush: "Straight Flush",
     #four_of_a_kind: "Four of a Kind",
     #full_house: "Full House",
-    #flush: "Flush",
-    #straight: "Straight",
+    flush: "Flush",
+    straight: "Straight",
     #three_of_a_kind: "Three of a Kind",
     #double_pair: "Two Pairs",
     #pair: "Pair",
@@ -51,5 +51,9 @@ class Hand
   def straight?
     values = @cards.map(&:value)
     values == (values.first..values.last).entries
+  end
+
+  def four_of_a_kind?
+    values = @cards.map(&:value)
   end
 end
